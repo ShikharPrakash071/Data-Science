@@ -1,0 +1,40 @@
+Q1) If an employee is in Sales AND salary is ≥ 50000, give BONUS else NO BONUS.
+code =IF(AND(cellNo>=50000,cellNo="SALES"),"Bonus","No-Bonus")
+
+Q2) If salary is ≥ 65000 OR department is Marketing, give BONUS else NO BONUS.
+code =IF(OR(CELLNO>=65000,CELLNO="Marketing"),"Bonus","No-Bonus")
+
+Q3 (HR rule AND)
+If employee is in HR AND salary is < 48000, give BONUS else NO BONUS.
+code =IF(EMP="HR",SAL<48000),"BONUS","NO-BONUS")
+
+Q4 (Sales high salary)
+If employee is in Sales AND salary is > 54000, give BONUS else NO BONUS.
+=IF(AND(ROLE="Sales",SAL>54000),"BONUS","NO-BONUS")
+
+Q5 (Marketing low salary)
+If employee is in Marketing AND salary is ≤ 60000, give BONUS else NO BONUS.
+=IF(AND(ROLE="Marketing",SAL<=60000),"BONUS","NO-BONUS")
+
+Q6 (Department not Sales OR high salary)
+If department is NOT Sales OR salary is > 70000, give BONUS else NO BONUS.
+=IF(OR(DEPT!="Sales",SAL>70000),"BONUS","NO-BONUS")
+
+Q7 (Mid level: Sales or HR with salary condition)
+If employee is in Sales OR HR AND salary is > 50000, give BONUS else NO BONUS.
+=IF(OR(AND(ROLE="Sales",ROLE="HR"),SAL>50000),"BONUS","NO-BONUS")
+
+Q8 (Marketing or salary range)
+If employee is in Marketing OR salary is between 45000 and 55000, give BONUS else NO BONUS.
+=IF(OR(ROLE="Marketing",AND(SAL>=45000,SAL<=55000)),"BONUS","NO-BONUS")
+
+Q9 (Double AND inside OR)
+If (employee is in Sales AND salary > 52000)
+OR (employee is in HR AND salary < 50000)
+then BONUS, else NO BONUS.
+=IF(OR(AND(ROLE="Sales",SAL>52000),AND(ROLE="HR",SAL<50000)),"BONUS","NO-BONUS")
+
+
+
+Q10 (Exclude Marketing)
+If department is NOT Marketing AND salary is ≥ 50000, give BONUS else NO BONUS.
